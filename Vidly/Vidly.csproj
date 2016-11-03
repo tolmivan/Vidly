@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -178,11 +179,28 @@
     <Compile Include="Migrations\201610260238556_InitialModel.Designer.cs">
       <DependentUpon>201610260238556_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611020103522_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201611020103522_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201611020103522_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611020152036_AddMembershipType.cs" />
+    <Compile Include="Migrations\201611020152036_AddMembershipType.Designer.cs">
+      <DependentUpon>201611020152036_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611020443196_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201611020443196_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201611020443196_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611022315379_ApplyAnnatationToCustomerName.cs" />
+    <Compile Include="Migrations\201611022315379_ApplyAnnatationToCustomerName.Designer.cs">
+      <DependentUpon>201611022315379_ApplyAnnatationToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -245,6 +263,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Customers\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -260,6 +281,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610260238556_InitialModel.resx">
       <DependentUpon>201610260238556_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611020103522_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201611020103522_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611020152036_AddMembershipType.resx">
+      <DependentUpon>201611020152036_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611020443196_PopulateMembershipTypes.resx">
+      <DependentUpon>201611020443196_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611022315379_ApplyAnnatationToCustomerName.resx">
+      <DependentUpon>201611022315379_ApplyAnnatationToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
